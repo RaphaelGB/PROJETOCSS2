@@ -1,0 +1,312 @@
+/* a font-family vai definir  a fonte usada nos elementos, 
+colocamos várias fontes para caso o navegador usado não suporte a primeira, 
+tente aplicar a segunda fonte e assim sucessivamente*/
+
+body{
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2, h3{
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+/*text decoration define a decoração do elemento,
+ o valor none diz que o texto não vai ter decoração*/
+.botao{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: 9cm;
+    border-radius: 3px;
+}
+
+/* Navegação */
+/* o flex-direction vai definir a direção em que os itens flexíveis, serão organizados.
+O flex-direction column faz com que ela seja organizada de cima para baixo
+O align-items vai ser responsável pelo alinhamento desses intens flexíveis. O valor center faz que
+todos os intens flexíveis fiquem envolto do centro.*/
+nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191970;
+}
+
+nav > a {
+
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 800;
+            font-size: 32px;
+            font-family: yellowtail, serif;
+}
+/*list-style vai definir o estilo, a imagem e a posição da lista, nesse caso o valor none tira a possibilidade
+de ter um estilo para a lista*/
+nav ul {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%
+
+}
+
+nav ul li{
+
+            text-align: center;
+            width: 100%;         
+}
+/*diplay: inline-block fará com que se forme um conjunto de elementos em um bloco que irá circundar o conteúdo. 
+Podendo alterar a altura e largura*/
+nav ul li a {
+
+             display: inline-block;
+             padding: 10px 0;
+             width: 100%;
+             text-decoration: none;
+             color: #FFFFFF;         
+}
+
+/* background-image: define quantas, e quais, iamgens de fundo serão colocadas.
+ background-size: define o tamanho da imagem de fundo, de forma com que ela mantenha a proporção
+ o valor cover faz com que a imagem fique com máximo de largura sem a imagem esticar.
+  background-repeat: organiza quantas vezes uma imagem pode repetir, no valor no-repeat nenhuma vez.
+   background-position: vai determinar a posição da imagem dentro do header, div, section, etc.
+   */
+/*O display:flex vai tornar todos os elementos filhos em intens flexíveis*/
+header {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("img/bahia02.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 20px;
+
+}
+
+header h1{
+
+    color: #FFFFFF;
+}
+/* margin bottom: vai definir a margem de baixo
+ de algum elemento, podendo receber valor negativo */
+header p{
+    margin-bottom: 2em;
+
+}
+/*O font-weight é responável pelo tamanho (grossura/finura) do texto*/
+header a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+/*O border-radius define o raio das bordas dos elementos.
+O cursor define como o cursor do mouse ficará.*/
+header button{
+    border: 0;
+    background-color: rgb(80, 126, 226);
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+/*o text-align vai cuidar da orientação do texto, 
+Nesse caso, o alinhamento fica a direita*/
+#sobre {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         padding: 10px 10px 20px 20px;
+         background-color: #191970;
+         color: #FFFFFF;
+}
+
+ #sobre h2 {
+       color: #FFFFFF;
+ }
+
+  #sobre p {
+       margin-bottom: 2.5em;
+       max-width: 1000px;
+       font-size: 20px;
+  }
+  #sobre .botao{
+      background-color: #f1f1f1;
+      color: #1c1c1c;
+  }
+
+  /*Serviços*/
+
+  #serviços{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding:30px;
+  }
+
+  #serviços div{ 
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     margin-top: 30px;
+  }
+#serviços p{
+    font-size: 24px;
+}
+#serviços a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+}
+#serviços button{
+    border: 0;
+    background-color: rgb(39, 140, 235);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+}  
+
+/*Fotos*/
+
+  #fotos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top:20px
+  }
+
+  #fotos h2{
+      margin-bottom: 20px;
+  }
+
+  #fotos img{
+      width:100%
+  }
+
+  /*Contatos*/
+
+  #contato{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  #contato h2{
+      color: #000000;
+  }
+  
+  /*rodapé*/
+
+  footer{
+      text-align: center;
+      padding: 10px;
+      background-color: #191970;
+      color: #FFFFFF;
+  }
+
+  footer a{
+      text-decoration: none;
+      color:#00FFFF;
+  }
+/*o media vai permitir que as propriedades de cada imagem seja mudada a partir de um min-width(largura mínima) 
+com a finalidade de deixar o site mais responsivo a telas menores como tablets ou smartphones.*/
+  @media screen and (min-width: 768px) {
+      nav{
+          flex-direction: row;
+          justify-content: space-around;
+      }
+      nav ul{
+          flex-direction: row;
+          width:70%
+      }
+  }
+
+  /*Cabeçalho*/
+/*o justify-content é responsável por alinhar os itens flexíveis, quando estes não ocupam todo eixo principal.
+Neste caso eles estão posicionados no centro do recipiente.*/
+  header{
+      height: 600px;
+      height: 60vh;
+      justify-content: center;
+  }
+
+  /*Sobre*/
+/*o min-height faz com que a altura do elemento se torne menor que o valor colocado(250px nesse caso).*/
+  #sobre{ 
+      height: 250px;
+      height: 30vh;
+      justify-content: center;
+      min-height: 250px;
+  }
+
+  /*serviços*/
+/*o flex-wrap é responsável por definir se os elementos irão ficar em uma linha somente, se eles vão se dividir em várias
+e se a direção da ordem vai ser de cima para baixo, ou de baixo para cima. O valor wrap faz que eles possam se dividir em 
+várias linhas com direção de cima para baixo*/
+  #serviços{
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+
+  #serviços h2{
+      text-align: center;
+      width: 100%;
+  }
+  /*O flex-grow vai definir o quanto que os itens flexíveis vão crescer conforme o espaço disponível
+  O flex-basis vai definir o tamanho inicial de um item flexível*/
+  #serviços div{
+      flex-grow: 1;
+      flex-basis: 150px;
+      padding: 0 10px;
+  }
+
+  /*fotos*/
+
+  #fotos{
+      flex-direction: row;
+      flex-wrap:wrap
+    
+  }
+
+  #fotos h2{
+      width: 100%;
+      text-align:center;
+  }
+
+  #fotos img{
+             width:33.3333333%;
+  }
+
+  /*Contato*/
+
+  #contato{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 500px;
+      margin: 0 auto;
+  }
+
+  #contato h2, #contato p{
+      width: 100%;
+  }
